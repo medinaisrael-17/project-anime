@@ -1,14 +1,14 @@
-import { StyleSheet, Button, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { Button } from "react-native-paper";
 
 export default function HomeScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<Text>HOME PAGE</Text>
-			<Button
-				title="Go to Login"
-				onPress={() => navigation.navigate("Login")}
-			/>
+			<Button mode="contained" onPress={() => navigation.navigate("Login")}>
+				Press Me
+			</Button>
 			<StatusBar style="auto" />
 		</View>
 	);
