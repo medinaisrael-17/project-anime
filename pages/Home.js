@@ -1,18 +1,26 @@
 import { StyleSheet, Text, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import { Button } from "react-native-paper";
 
 export default function HomeScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<Text>HOME PAGE</Text>
-			<Button mode="contained" onPress={() => navigation.navigate("Login")}>
+			<Button
+				mode="contained"
+				color="#ffffff"
+				style={styles.button}
+				onPress={() => navigation.navigate("Login")}
+			>
 				LOGIN
 			</Button>
-			<Button mode="contained" onPress={() => navigation.navigate("Search")}>
+			<Button
+				mode="contained"
+				color="#ffffff"
+				style={styles.button}
+				onPress={() => navigation.navigate("Search")}
+			>
 				SEARCH
 			</Button>
-			<StatusBar style="auto" />
 		</View>
 	);
 }
@@ -23,5 +31,8 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center",
+	},
+	button: {
+		backgroundColor: "#696969",
 	},
 });

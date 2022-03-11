@@ -7,22 +7,30 @@ const image = {
 
 export default function LoginScreen() {
 	return (
-		<View style={styles.container}>
-			<ImageBackground source={image} style={styles.image}>
-				<Text>LOGIN PAGE</Text>
+		<ImageBackground source={image} style={styles.image}>
+			<View style={styles.container}>
+				<Text style={styles.text}>LOGIN PAGE</Text>
 				<StatusBar style="auto" />
-			</ImageBackground>
-		</View>
+			</View>
+		</ImageBackground>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		alignItems: "center",
 		justifyContent: "center",
 	},
 	image: {
 		flex: 1,
 		justifyContent: "center",
+	},
+	text: {
+		color: "white",
+		alignItems: "center",
+	},
+	button: {
+		alignItems: "center",
 	},
 });
